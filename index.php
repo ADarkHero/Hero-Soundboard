@@ -20,15 +20,7 @@
             </form>
 
             <?php		
-                //Username, Password etc for database
-                $db_host = "localhost";
-                $db_name = "sound";
-                $db_user = "root";
-                $db_pass = "";
-                $table_name = "sound";
-
-                $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-
+                require_once 'database.php';
 
                 //If the user searches -> Display entries based on search
                 //If not: Display everything
@@ -48,13 +40,16 @@
                         echo '<h1 class="soundCategory">'.$row["SoundCategory"].'</h1>';
                     }
 
-                    //Display the buttons
+                    //Display the buttons in random colors  
+                    $buttoncolors = array("primary", "secondary", "success", "danger", "warning", "info", "dark");
                     ?>
-                    <button type="button" class="btn btn-outline-primary btn-lg soundButton" onclick="playSound('<?php echo $row["SoundFilePath"];  ?>')">
+                    <button type="button" class="btn btn-outline-<?php echo $buttoncolors[rand(0, count($buttoncolors)-1)]; ?> btn-lg soundButton" onclick="playSound('<?php echo $row["SoundFilePath"];  ?>')">
                         <?php 
                             echo '<span class="soundName">'.$row["SoundName"].'</span>';  
-                            echo "<br>";
-                            echo '<span class="soundDescription">'.$row["SoundDescription"].'</span>';  
+                            if(strlen($row["SoundDescription"]) !== 0){
+                                echo "<br><br>";
+                                echo '<span class="soundDescription">'.$row["SoundDescription"].'</span>';  
+                            }
                         ?>
                     </button>
                     <?php

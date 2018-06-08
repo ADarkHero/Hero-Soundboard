@@ -2,6 +2,11 @@
     width: 90%;
     margin: auto;
     margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.btn {
+    white-space: normal;
 }
 
 .search {
@@ -30,16 +35,25 @@
     }
 }
 
+.soundButton{
+    line-height: 0.8;
+}
+
 .soundCategory{
     margin-top: 0.5em;
 }
 
+.soundName{
+    font-size: 1em;
+}
+
 .soundDescription{
-    font-size: 0.6em;
+    font-size: 0.5em;
 }
 
 .soundButton{
     width: 22%;
+    min-height: 5em;
     margin-left: 2%;
     margin-top: 0.25em;
 }
