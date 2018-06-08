@@ -1,0 +1,51 @@
+#center{
+    width: 90%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.search {
+    margin-bottom: 2em;
+    border-width: 2px;
+    border-style: inset;
+    height: 2.5em;
+    width: 75%;
+    margin-left: 5%;
+}
+@media only screen and (max-width: 768px) {
+    .search {
+        width: 50%;
+    }
+}
+
+.searchbutton{
+    height: 2.5em;
+    width: 6.5%;
+    margin-left: 1%;
+}
+@media only screen and (max-width: 768px) {
+    .searchbutton {
+        width: 15%;
+        margin-left: 2%;
+    }
+}
+
+.soundCategory{
+    margin-top: 0.5em;
+}
+
+.soundDescription{
+    font-size: 0.6em;
+}
+
+.soundButton{
+    width: 22%;
+    margin-left: 2%;
+    margin-top: 0.25em;
+}
+@media only screen and (max-width: 768px) {
+    .soundButton{
+        width: 40%;
+        margin-left: 5%;
+    }
+}
