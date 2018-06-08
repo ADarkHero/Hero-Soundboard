@@ -26,12 +26,12 @@ body{
     width: 75%;
     margin-left: 5%;
 }
-@media (max-width: 1023px) {
+@media (max-width: 935px) {
     .search {
         width: 60%;
     }
 }
-@media (max-width: 479px) {
+@media (max-width: 500px) {
     .search {
         width: 50%;
     }
@@ -42,13 +42,13 @@ body{
     width: 6.5%;
     margin-left: 1%;
 }
-@media (max-width: 1023px) {
+@media (max-width: 935px) {
     .searchbutton {
         width: 13.5%;
         margin-left: 1.5%;
     }
 }
-@media (max-width: 479px) {
+@media (max-width: 500px) {
     .searchbutton {
         width: 17%;
         margin-left: 3%;
@@ -80,21 +80,21 @@ body{
     margin-top: 0.5em;
 }
 /* Show only four buttons per row */
-@media (max-width: 1439px) {
+@media (max-width: 1400px) {
     .soundButton{
         width: 21.25%;
         margin-left: 3%;
     }
 }
 /* Show only two buttons per row */
-@media (max-width: 1023px) {
+@media (max-width: 935px) {
     .soundButton{
         width: 44%;
         margin-left: 4%;
     }
 }
 /* Show only one buttons per row */
-@media (max-width: 479px) {
+@media (max-width: 500px) {
     .soundButton{
         margin-left: 5%;
         width: 90%;
