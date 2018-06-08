@@ -31,6 +31,11 @@ body{
         width: 60%;
     }
 }
+@media only screen and (max-width: 480px) {
+    .search {
+        width: 50%;
+    }
+}
 
 .searchbutton{
     height: 2.5em;
@@ -39,8 +44,14 @@ body{
 }
 @media only screen and (max-width: 1024px) {
     .searchbutton {
-        width: 14%;
-        margin-left: 1.25%;
+        width: 13.5%;
+        margin-left: 1.5%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .searchbutton {
+        width: 17%;
+        margin-left: 3%;
     }
 }
 
