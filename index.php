@@ -30,8 +30,9 @@
                 //If not: Display everything
                 $sql = "SELECT * FROM ".$table_name." ";
                 if(isSet($_GET["search"])) {
-                    $search = $_GET["search"];
-                    $sql .= "WHERE SoundName LIKE '".$search."' OR SoundDescription LIKE '".$search."' OR SoundFilePath LIKE '".$search."' OR SoundCategory  LIKE '".$search."'";
+                    $search = "%".$_GET["search"]."%";
+                    $sql .= "WHERE SoundName LIKE '".$search."' OR SoundDescription LIKE '".$search."' "
+                            . "OR SoundFilePath LIKE '".$search."' OR SoundCategory  LIKE '".$search."' ";
                 }      
                 $sql .= "ORDER BY SoundCategory, SoundName";
                 $statement = $pdo->prepare($sql);
