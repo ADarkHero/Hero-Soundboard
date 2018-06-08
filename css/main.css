@@ -39,8 +39,8 @@ body{
 }
 @media only screen and (max-width: 1024px) {
     .searchbutton {
-        width: 15%;
-        margin-left: 1.5%;
+        width: 14%;
+        margin-left: 1.25%;
     }
 }
 
