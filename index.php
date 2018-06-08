@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>ADarkHero Soundboard</title>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+     
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,9 +19,7 @@
         
         <div id="center">
             <form action="index.php" method="get">
-                <input type="search" class="search" name="search" class="search" placeholder="Search..." autofocus>
-                <input type="submit" class="searchbutton" value="submit"></input>
-                <a href="index.php"><input type="button" class="searchbutton" value="reset"></a></input>
+                <input type="search" class="search" name="search" class="search" placeholder="Search..." autofocus><input type="submit" class="searchbutton" value="submit"></input><a href="index.php"><input type="button" class="searchbutton" value="reset"></a></input>
             </form>
 
             <?php		
