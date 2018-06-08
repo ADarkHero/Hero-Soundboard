@@ -1,8 +1,16 @@
+body{
+    color: #000000;
+}
+
 #center{
     width: 90%;
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+#footer{
+    margin-top: 6em;
 }
 
 .btn {
@@ -17,7 +25,7 @@
     width: 75%;
     margin-left: 5%;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .search {
         width: 60%;
     }
@@ -28,10 +36,10 @@
     width: 6.5%;
     margin-left: 1%;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .searchbutton {
         width: 15%;
-        margin-left: 2%;
+        margin-left: 1.5%;
     }
 }
 
@@ -40,6 +48,7 @@
 }
 
 .soundCategory{
+    font-family: 'Spectral', serif;
     margin-top: 0.5em;
 }
 
@@ -52,12 +61,18 @@
 }
 
 .soundButton{
-    width: 22%;
+    width: 14%;
     min-height: 5em;
     margin-left: 2%;
-    margin-top: 0.25em;
+    margin-top: 0.5em;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1440px) {
+    .soundButton{
+        width: 22%;
+        margin-left: 2%;
+    }
+}
+@media only screen and (max-width: 1024px) {
     .soundButton{
         width: 44%;
         margin-left: 5%;
