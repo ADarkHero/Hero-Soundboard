@@ -7,6 +7,7 @@ body{
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+    overflow: hidden;
 }
 
 #footer{
@@ -60,21 +61,31 @@ body{
     font-size: 0.5em;
 }
 
+/* Show six buttons per row */
 .soundButton{
-    width: 14%;
+    width: 14.33%;
     min-height: 5em;
     margin-left: 2%;
     margin-top: 0.5em;
 }
+/* Show only four buttons per row */
 @media only screen and (max-width: 1440px) {
     .soundButton{
-        width: 22%;
-        margin-left: 2%;
+        width: 21.25%;
+        margin-left: 3%;
     }
 }
+/* Show only two buttons per row */
 @media only screen and (max-width: 1024px) {
     .soundButton{
         width: 44%;
+        margin-left: 4%;
+    }
+}
+/* Show only one buttons per row */
+@media only screen and (max-width: 480px) {
+    .soundButton{
         margin-left: 5%;
+        width: 90%;
     }
 }

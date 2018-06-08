@@ -47,8 +47,7 @@
 
                     //Display the buttons in random colors  
                     $buttoncolors = array("primary", "secondary", "success", "danger", "warning", "info", "dark");
-                    ?>
-                    <button type="button" class="btn btn-outline-<?php echo $buttoncolors[rand(0, count($buttoncolors)-1)]; ?> btn-lg soundButton" onclick="playSound('<?php echo $row["SoundFilePath"];  ?>')">
+                    ?><button type="button" class="btn btn-outline-<?php echo $buttoncolors[rand(0, count($buttoncolors)-1)]; ?> btn-lg soundButton" onclick="playSound('<?php echo $row["SoundFilePath"];  ?>')">
                         <?php 
                             echo '<span class="soundName">'.$row["SoundName"].'</span>';  
                             if(strlen($row["SoundDescription"]) !== 0){
@@ -56,11 +55,11 @@
                                 echo '<span class="soundDescription">'.$row["SoundDescription"].'</span>';  
                             }
                         ?>
-                    </button>
-                    <?php
+                    </button><?php
 
                     //Save the used category, to check, if the category changes
                     $lastCategory = $row["SoundCategory"];
+                    
                 }
             ?>
             
