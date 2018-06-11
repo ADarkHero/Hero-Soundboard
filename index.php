@@ -20,6 +20,7 @@
         <div id="center">
             <form action="index.php" method="get">
                 <input type="search" class="search" name="search" class="search" placeholder="Search..." autofocus><input type="submit" class="searchbutton" value="submit"></input><a href="index.php"><input type="button" class="searchbutton" value="reset"></a></input>
+                <?php if(isset($_GET["searchCategory"])){ ?> <input type="hidden" name="searchCategory" value="<?php echo $_GET["searchCategory"];?>"><?php } ?>
             </form>
 
             <?php		
