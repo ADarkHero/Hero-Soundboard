@@ -30,10 +30,17 @@
                 $sql = "SELECT * FROM ".$table_name." ";
                 if(isSet($_GET["search"])) {
                     $search = "%".$_GET["search"]."%";
-                    $sql .= "WHERE SoundName LIKE '".$search."' OR SoundDescription LIKE '".$search."' "
-                            . "OR SoundFilePath LIKE '".$search."' OR SoundCategory  LIKE '".$search."' ";
+                    $sql .= "WHERE (SoundName LIKE '".$search."' OR SoundDescription LIKE '".$search."' "
+                            . "OR SoundFilePath LIKE '".$search."') ";
+                    if(isset ($_GET["searchCategory"])){
+                        $sql .=  "AND SoundCategory = '".$_GET["searchCategory"]."' ";
+                    }
+                    else{
+                        $sql .=  "OR SoundCategory LIKE '".$search."' ";
+                    }
                 }      
                 $sql .= "ORDER BY SoundCategory, SoundName";
+                                
                 $statement = $pdo->prepare($sql);
                 $result = $statement->execute();
 
@@ -41,7 +48,9 @@
                 for($i = 1; $row = $statement->fetch(); $i++) {
                     //If the category is different, make a new headline
                     if($lastCategory !== $row["SoundCategory"]){
-                        echo '<h1 class="soundCategory">'.$row["SoundCategory"].'</h1>';
+                        if(isset($_GET["search"])){ $search = $_GET["search"]; }
+                        else{ $search = ""; }
+                        echo '<a href="index.php?search='.$search.'&searchCategory='.$row["SoundCategory"].'"><h1 class="soundCategory">'.$row["SoundCategory"].'</h1></a>';
                     }
 
                     //Display the buttons in random colors  
