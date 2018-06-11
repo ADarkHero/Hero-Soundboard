@@ -7,11 +7,17 @@ body{
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+    padding-left: 2%;
+    padding-right: 2%;
     overflow: hidden;
 }
 
 #footer{
     margin-top: 6em;
+}
+
+#errsucccode{
+    text-align: center;
 }
 
 .btn {
