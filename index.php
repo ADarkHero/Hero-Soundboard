@@ -26,8 +26,14 @@
                 <?php } ?>
             </form>
 
-            <?php		
+            <button type="button" class="btn btn-outline-secondary btn-lg soundButton randomSoundButton" onclick="playRandomSound()">
+                <span class="soundName">Play random sound</span>
+            </button>
+            
+            <?php
                 require_once 'database.php';
+                $soundList = array();
+
 
                 //If the user searches -> Display entries based on search
                 //If not: Display everything
@@ -59,7 +65,7 @@
 
                     //Display the buttons in random colors  
                     $buttoncolors = array("primary", "secondary", "success", "danger", "warning", "info", "dark");
-                    ?><button type="button" class="btn btn-outline-<?php echo $buttoncolors[rand(0, count($buttoncolors)-1)]; ?> btn-lg soundButton" onclick="playSound('<?php echo $row["SoundFilePath"];  ?>')">
+                    ?><button type="button" class="btn btn-outline-<?php echo $buttoncolors[rand(0, count($buttoncolors)-1)]; ?> btn-lg soundButton" onclick="playSound('<?php echo $row["SoundFilePath"];  array_push($soundList, $row["SoundFilePath"]); ?>')">
                         <?php 
                             echo '<span class="soundName">'.$row["SoundName"].'</span>';  
                             if(strlen($row["SoundDescription"]) !== 0){
@@ -73,6 +79,7 @@
                     $lastCategory = $row["SoundCategory"];
                     
                 }
+                
             ?>
             
             
@@ -87,6 +94,23 @@
             function playSound(filename){
                 var audio = new Audio(filename);
                 audio.play(); 
+            } 
+        </script>
+        
+        <script>
+            function playRandomSound(){
+                var randSounds = [];
+                <?php
+                    for($i = 0; $i < sizeof($soundList); $i++){
+                        echo "randSounds.push('".$soundList[$i]."'); ";
+                    }
+                ?>
+                        
+                var random = Math.floor((Math.random() * randSounds.length - 1) + 1);
+                var audio = new Audio(randSounds[random]);
+                audio.play(); 
+                
+                alert(randSounds[random]);
             } 
         </script>
         
