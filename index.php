@@ -109,8 +109,6 @@
                 var random = Math.floor((Math.random() * randSounds.length - 1) + 1);
                 var audio = new Audio(randSounds[random]);
                 audio.play(); 
-                
-                alert(randSounds[random]);
             } 
         </script>
         
