@@ -7,7 +7,7 @@
     if(isset($_POST["soundName"])){
         //Was the entered password correct?
         if(isset($_POST["password"]) && $_POST["password"] === $admin_pass){
-            //Did the user input a name and chose a file?#
+            //Did the user input a name and chose a file?
             //If yes, upload the file and write the data to the database.
             if(strlen($_POST["soundName"]) !== 0 && !empty($_FILES['soundFile'])){
                 $path = "sound/";
@@ -22,7 +22,7 @@
                     $statement->execute();
 
                     $errsucccode = "The file ".  basename( $_FILES['soundFile']['name']). 
-                    " has been uploaded and added to the soundboard!"; 
+                    ' has been uploaded and added to the soundboard! <a href="index.php">Back to main page</a>'; 
                 } else{
                     $errsucccode = "There was an error uploading the file, please try again!"; 
                 }
